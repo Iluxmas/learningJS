@@ -1,44 +1,59 @@
-/* Задание на урок:
-
-1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
-'Сколько фильмов вы уже посмотрели?'
-
-2) Создать объект personalMovieDB и в него поместить такие свойства:
-    - count - сюда передается ответ на первый вопрос
-    - movies - в это свойство поместить пустой объект
-    - actors - тоже поместить пустой объект
-    - genres - сюда поместить пустой массив
-    - privat - в это свойство поместить boolean(логическое) значение false
-
-3) Задайте пользователю по два раза вопросы:
-    - 'Один из последних просмотренных фильмов?'
-    - 'На сколько оцените его?'
-Ответы стоит поместить в отдельные переменные
-Записать ответы в объект movies в формате: 
-    movies: {
-        'logan': '8.1'
-    }
-
-Проверить, чтобы все работало без ошибок в консоли */
 
 'use strict';
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+
 const personalMovieDB = {
-    count: numberOfFilms,
+    count: 0,
     movies: {},
     actors: {},
     genres: [],
-    privat: false
-};
-
-let i = 0;
-let movieName;
-let movieRate;
-while (i < 2) {
-    movieName = prompt('Один из последних просмотренных фильмов?');
-    movieRate = prompt('На сколько оцените его?');
-    personalMovieDB.movies[movieName] = movieRate;
-    i++;
+    privat: false,
+    start: function () {
+        let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+    
+        while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+            numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?');
+        }
+        personalMovieDB.count = numberOfFilms;
+    },
+    rememberMyfilms: function() {
+        for (let i = 0; i < 2; i++) {
+            let movieName = prompt('Один из последних просмотренных фильмов?');
+            let movieRate = prompt('На сколько оцените его от 1 до 10?');
+            if (!movieName || movieName.length > 50 || movieName == '') {
+                i--;
+            } else {
+                    personalMovieDB.movies[movieName] = movieRate;
+            }
+            }
+    },
+    detectLevel: function() {
+        if (personalMovieDB.count < 10) {
+            console.log('Prosmotreno dovolno malo filmov');
+        } else if (personalMovieDB.count < 30) {
+            console.log('Vi klassicheskii zritel');
+        } else if (personalMovieDB.count >= 30) {
+            console.log('Vi kinoman');
+        } else {
+            console.log('Proizoshla oshibka');
+        }
+    },
+    showMyDB: function () {
+        !personalMovieDB.privat ? console.log(personalMovieDB) : 1 + 1; 
+    },
+    writeYourGenres: function () {
+        for (let i = 1; i < 4; i++) {
+            personalMovieDB.genres[i-1] = prompt(`Ваш любимый жанр под номером ${i}?`);
+            };
+    },
+    toggleVisibleMyDB: function () {
+    (personalMovieDB.privat) ? personalMovieDB.privat = false : personalMovieDB.privat = true;
     }
-console.log(personalMovieDB.movies);
+    };
+personalMovieDB.showMyDB();
+personalMovieDB.toggleVisibleMyDB();
+console.log(personalMovieDB.privat);
+
+
+
+// console.log(personalMovieDB.movies);
