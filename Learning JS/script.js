@@ -140,3 +140,21 @@ const john = Object.create(soldier);
 john.sayHello()
 
 
+// Urok 26 dinamich tipizaciya
+//1
+console.log(String(null));
+//2
+console.log(typeof(5 + ''));
+
+// To number
+console.log(typeof(Number('4')));
+console.log(typeof(+'5'));
+console.log(typeof(parseInt("15px", 10)));
+
+// To boolean
+
+// 0, '', null, undefined, NaN; // <- false
+
+
+
+

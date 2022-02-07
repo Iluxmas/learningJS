@@ -43,14 +43,14 @@ const personalMovieDB = {
     },
     writeYourGenres: function () {
         for (let i = 1; i < 4; i++) {
-            personalMovieDB.genres[i-1] = prompt(`Ваш любимый жанр под номером ${i}?`);
+            personalMovieDB.genres[i-1] = prompt(`Ваш любимый жанр под номером ${i}?`).toLowerCase();
             if (!personalMovieDB.genres[i-1] || personalMovieDB.genres[i-1] == '') {
                 i--;
             } 
-            };
-            personalMovieDB.genres.forEach(function (item, i){
-                console.log(`Любимый жанр #${i+1} - это ${item}`);
-            })
+        }
+        personalMovieDB.genres.forEach(function (item, i){
+            console.log(`Любимый жанр #${i+1} - это ${item}`);
+        });
     },
     toggleVisibleMyDB: function () {
     (personalMovieDB.privat) ? personalMovieDB.privat = false : personalMovieDB.privat = true;
