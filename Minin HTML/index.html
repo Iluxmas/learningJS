@@ -4,80 +4,105 @@
 <head>
     <meta charset="UTF-8">
     <title>Ilya CV</title>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body">
-<div class="container">
-<div class="info">
-    <img src="IMG_4844.jpg" alt="My photo here" width="200" class="avatar">
+    <div class="container">
+        <div class="info">
+            <img src="IMG_4844.jpg" alt="My photo here" width="200" class="avatar">
 
-    <h1>Sulkhanov Ilya</h1>
-    <p>I am beginner frontend developer</p>
-    <p>I love traveling, snowboarding and Beer </p>
-    <h4>My social profiles</h4>
-    
-        <a href="https://instagram.com/iluxmas" target="blank">Instagram</a> 
-        |
-        <a href="https://t.me/topsykrets" target="blank">Telegram</a>
-    
-</div> 
-</div >
+            <div class="info-text">
+                <h1>Sulkhanov Ilya</h1>
+                <p>I am beginner frontend developer</p>
+                <p>I love traveling, snowboarding and Beer </p>
+                <h4>My social profiles</h4>
 
-<div class="card bg-yellow">
-    <h2>My hobbies</h2>
-    <ol class="list">
-        <li>Snowboarding</li>
-        <li>Traveling</li>
-        <li>Science</li>
-        <li>Painting</li>
-    </ol>
-</div>
- 
-<div class="card bg-green">
-    <h2>Professional Experience:</h2>
-    <table>
-        <tr>
-            <th>Company</th>
-            <th>Position</th>
-            <th>Year</th>
-        </tr>
-        <tr>
-            <td>VIMS Research Institute</td>
-            <td>Researcher</td>
-            <td>2011-2017</td>
-        </tr>
-        <tr>
-            <td>Siegwerk</td>
-            <td>Chemist</td>
-            <td>2017-2020</td>
-        </tr>
-        <tr>
-            <td>Siegwerk</td>
-            <td>Application Technology Manager</td>
-            <td>2020-2022</td>
-        </tr>
-    </table>
-</div>
+                <a href="https://instagram.com/iluxmas" target="blank">Instagram</a>
+                |
+                <a href="https://t.me/topsykrets" target="blank">Telegram</a>
+            </div>
+        </div>
+    </div>
 
-<div class="card bg-red">
-    <h2><a href="">Finished projects</a></h2>
-</div>
+    <div class="card bg-yellow">
+        <h2 class="proffexp">My hobbies</h2>
+        <ol class="list">
+            <li>Snowboarding</li>
+            <li>Traveling</li>
+            <li>Science</li>
+            <li>Painting</li>
+        </ol>
+    </div>
 
+    <div class="card bg-green">
+        <h2 class="proffexp">Professional Experience</h2>
+        <table class="table">
+            <tr>
+                <th>Company</th>
+                <th>Position</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>VIMS Research Institute</td>
+                <td>Researcher</td>
+                <td>2011-2017</td>
+            </tr>
+            <tr>
+                <td>Siegwerk</td>
+                <td>Chemist</td>
+                <td>2017-2020</td>
+            </tr>
+            <tr>
+                <td>Siegwerk</td>
+                <td>Application Technology Manager</td>
+                <td>2020-now</td>
+            </tr>
+        </table>
+    </div>
 
-    <h2>Contact me</h2>
-    <form action="">
-        <label for="name">Your name</label>
-        <input type="text" id="name" placeholder="Enter your name...">
-        <br>
-        <label for="email">Your email</label>
-        <input type="text" id="email" placeholder="Enter you email...">
-        <br>
-        <label for="message">Your message</label>
-        <textarea id="message" rows="2" cols="15"></textarea>
-        <br>
-        <input type="submit" value="Contact">
-    </form>
+    <div class="card bg-red">
+        <h2 class="proffexp"><a href="">Finished projects</a></h2>
+        <ul class="link-list">
+            <li>Here will</li>
+            <li>be links</li>
+            <li>to my projects</li>
+        </ul>
+    </div>
+
+    <div class="card bg-red">
+        <h2 class="proffexp"><a href="">Finished courses list</a></h2>
+        <ul class="link-list">
+            <li>Here will</li>
+            <li>be links</li>
+            <li>to my projects</li>
+        </ul>
+    </div>
+
+    <div class="contact">
+        <h2>Contact me</h2>
+        <form action="/">
+            <div class="row">
+                <div class="form-group">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" placeholder="Enter your name...">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your email</label>
+                    <input type="text" id="email" placeholder="Enter you email...">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Your message</label>
+                <textarea id="message" rows="2" cols="15" placeholder="Enter you message here..."></textarea>
+            </div>
+
+            <input class="btn" type="submit"  value="Contact">
+        </form>
+        <div class="position">
+            <div class="box"></div>
+        </div>
+    </div>
 
     <div class="box-model">
         <div></div>
@@ -85,7 +110,7 @@
         <div></div>
         <div></div>
     </div>
-</div>
-</body>
+    </div>
+    </body>
 
 </html>
